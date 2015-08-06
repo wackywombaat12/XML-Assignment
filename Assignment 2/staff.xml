@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+	<accounts>
+		<user>
+			<username>ksmith</username>
+			<password>dog5</password>
+		</user>
+		<user>
+			<username>lcronk</username>
+			<password>cat2</password>
+		</user>
+		<user>
+			<username>trobin</username>
+			<password>duck7</password>
+		</user>
+	</accounts>

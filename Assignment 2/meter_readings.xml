@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+
+<meterreadings 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="meter_readings.xsd">
+
+	<meterreading date="29/11/2009">
+		<number>234567</number>
+		<reading>1089</reading>
+	</meterreading>
+	<meterreading date="29/11/2009">
+		<number>134456</number>
+		<reading>67990</reading>
+	</meterreading>
+	<meterreading date="29/11/2009">
+		<number>342566</number>
+		<reading>29011</reading>
+	</meterreading>
+</meterreadings>
+
+		

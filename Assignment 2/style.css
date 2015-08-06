@@ -1,0 +1,37 @@
+#login {
+	margin-left:300px;
+	margin-top:200px;
+	border:1px solid blue;
+	width:200px;
+	padding:20px;
+	}
+#user{
+	background-color:#FFFFCC;
+	}
+#pass{
+	background-color:#FFFFCC;
+	}
+label{
+	font-family:sans-serif;
+	color:#00CC00;
+	}
+h2{
+	color:#3366CC;
+	font-family:Lucida Console;
+	}
+h1{
+	color:#3366CC;
+	font-family:Lucida Console;
+	}
+.main {
+	margin-left:500px;
+	margin-top:50px;
+	background-color:#CCFFFF;
+	width:500px;
+	}
+body {
+	font-family:sans-serif;
+	}
+h3 {
+	color:#009999;
+	}

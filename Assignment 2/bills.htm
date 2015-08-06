@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<script>
+function loadXMLDoc(dname)
+{
+if (window.ActiveXObject)
+  {
+  //Browser is IE
+    domDoc = new ActiveXObject("Microsoft.XMLDOM");
+   	domDoc.async="false";
+   	domDoc.load(dname)
+    return domDoc
+  
+  }
+else
+  {
+  xhttp=new XMLHttpRequest();
+  xhttp.open("GET",dname,false);
+  xhttp.send("");
+  return xhttp.responseXML;
+  }
+
+}
+
+function displayResult()
+{
+xml=loadXMLDoc("meter_readings.xml");
+
+xsl=loadXMLDoc("create_bills.xsl");
+// code for IE
+if (window.ActiveXObject)
+  {
+  ex=xml.transformNode(xsl);
+  document.getElementById("file").innerHTML=ex;
+  
+ 
+  
+  
+  }
+// code for Mozilla, Firefox, Opera, etc.
+else if (document.implementation && document.implementation.createDocument)
+  {
+  xsltProcessor=new XSLTProcessor();
+  xsltProcessor.importStylesheet(xsl);
+  
+  resultDocument = xsltProcessor.transformToFragment(xml,document);
+  document.getElementById("file").appendChild(resultDocument);
+  
+  
+  }
+}
+</script>
+</head>
+<body id="file" onload="displayResult()">
+
+
+
+
+<p><a href="default.php">Back</a></p>
+	</body>
+</html>
